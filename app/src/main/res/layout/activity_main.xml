@@ -9,17 +9,18 @@
 
     <ImageView
         android:id="@+id/logo_bg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
         android:src="@drawable/pizzabg" />
 
     <View
 
+        android:id="@+id/view"
+
         android:layout_width="match_parent"
 
-        android:layout_height="match_parent"
-
+        android:layout_height="200dp"
         android:background="#8000" />
 
     <TextView
@@ -27,7 +28,7 @@
         style="@style/logoStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="@string/logotext"
         app:layout_constraintEnd_toEndOf="@+id/logo_bg"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,5 +43,89 @@
         app:layout_constraintEnd_toEndOf="@+id/logo_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_text_view" />
+
+    <TextView
+        android:id="@+id/biz_desc_text_view"
+        style="@style/descStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ImageButton
+        android:id="@+id/meatlovers_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/test1"
+        app:layout_constraintEnd_toStartOf="@+id/veggis_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/biz_desc_text_view" />
+
+    <ImageButton
+        android:id="@+id/veggis_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/test2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/meatlovers_button"
+        app:layout_constraintTop_toBottomOf="@+id/biz_desc_text_view" />
+
+    <ImageView
+        android:id="@+id/location_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/location"
+        app:layout_constraintEnd_toStartOf="@+id/loc_desc_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meatlovers_button" />
+
+    <TextView
+        android:id="@+id/loc_desc_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/locdesc"
+        app:layout_constraintStart_toEndOf="@+id/location_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/meatlovers_button" />
+
+    <ImageView
+        android:id="@+id/call_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/call"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_image_view" />
+
+    <TextView
+        android:id="@+id/call_desc_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/calldesc"
+        app:layout_constraintStart_toEndOf="@+id/call_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/location_image_view" />
 
 </android.support.constraint.ConstraintLayout>
